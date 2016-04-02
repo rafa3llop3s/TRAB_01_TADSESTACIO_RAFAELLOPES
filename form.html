@@ -1,0 +1,97 @@
+<html>
+        <head>
+              <title> formulario </title>
+			<meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+			  
+			  <style type="text/css">
+			  
+			    body {
+				    margin-top: 150px;
+					margin-right: 20px;
+					margin-left: 10px;
+					margin-bottom: 10px;
+				}
+				</style>
+				
+				<script>
+				
+				function validaCampoNome(){
+				
+				var msg = "";
+				
+				 var form = document.forms[0];
+				 if(form.nome.value==""){
+				 alert("O campo nome e obrigatorio!!!")
+				 return false;
+				 } else
+				 return true;
+				}
+				
+				</script>
+        </head>
+
+    <body bgcolor="grey">
+	
+	    <h1 align="center"> sistema de cadastramento </h1>
+	
+	
+	      <form method="post" action="form.html" name="formulario" id="formulario" onsubmit="javascript: return validaCampoNome();">
+		  
+		  
+		       <table border="1" align="center">
+			   <tr> 
+			       <td colspan="2" align="center"> Cadastro de cliente </td>
+			   </tr>
+			   <tr>
+			       <td> CPF: </td>
+				   <td> <input type="text" name="cpf" size="14"> </td>
+			   </tr>
+			   <tr>
+			      <td> Nome: </td>
+				  <td> <input type="text" name="nome" size="80"> </td>
+				</tr>
+			   <tr>
+			      <td> Endereco: </td>
+				  <td> <input type="text" name="endereco" size="80"> </td>
+			   </tr>
+			   <tr>
+			      <td> Cidade: </td>
+				  <td> <input type="text" name="cidade" size="50"> </td>
+			   </tr>
+			   <tr>
+			      <td> Sexo: </td>
+				  <td> <select name="sexo">
+				       <option value="valor1"> escolher sexo </option>
+					   <option value="valor2"> Masculino </option>
+					   <option value="valor3"> Feminino </option>
+				  </td>
+			   </tr>
+			   <tr>
+			      <td> Telefone: </td>
+				  <td> <input type="text" name="telefone" size="15"> </td>
+			   </tr>
+			   <tr>
+			      <td> E-mail(login): </td>
+				  <td> <input type="text" name="email" size="40"> </td>
+			   </tr>
+			   <tr>
+			      <td> Senha: </td>
+				  <td> <input type="password" name="senha" size="15"> </td>
+			   </tr>
+			   <tr>
+			      <td> Receber Promocoes: </td>
+				  <td> <input type="checkbox" name="sim"> sim <input type="checkbox" name="nao"> nao </td>
+			   </tr>
+			   <tr>
+			      <td> Obs: </td>
+				  <td> <textarea rows="8" cols="70" size="200"> </textarea> </td>
+			   </tr>
+			   <tr>
+			      <td> </td>
+				  <td> <button type="submit" name="Enviar"> Enviar </button> 
+				       <button type="submit" name="valores"> Valores </button> </td>
+			   </tr>
+		   </table>
+		</form>
+    </body>
+</html>
