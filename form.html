@@ -15,18 +15,41 @@
 				
 				<script>
 				
-				function validaCampoNome(){
+				function validaCampo(){
 				
-				var msg = "";
-				
-				 var form = document.forms[0];
-				 if(form.nome.value==""){
-				 alert("O campo nome e obrigatorio!!!")
+				 var d = document.formulario;
+				 
+				 if(d.nome.value==""){
+				 alert("O campo nome e obrigatorio!!!");
 				 return false;
-				 } else
-				 return true;
+				 }
+				 
+				 if (d.cpf.value==""){
+				 alert ("O campo CPF é obrigatorio.");
+				 return false;
+				 }
+				 
+				 if(d.endereco.value==""){
+				 alert ("O endereco é obrigatorio");
+				 return false;
+				 }
+				 
+				 if (d.cidade.value==""){
+				 alert ("O campo cidade é obrigatorio");
+				 return false;
+				 }
+				 
+				 if(d.email.value==""){
+				 alert ("O campo email é obrigatorio.");
+				 return false;
+				 }
+				 
+				 if (d.senha.value==""){
+				 alert ("O campo senha é obrigatorio.");
+				 return false;
+				} else
+				return true;
 				}
-				
 				</script>
         </head>
 
@@ -35,7 +58,7 @@
 	    <h1 align="center"> sistema de cadastramento </h1>
 	
 	
-	      <form method="post" action="form.html" name="formulario" id="formulario" onsubmit="javascript: return validaCampoNome();">
+	      <form method="post" action="form.html" name="formulario" id="formulario" onsubmit="javascript: return validaCampo();">
 		  
 		  
 		       <table border="1" align="center">
